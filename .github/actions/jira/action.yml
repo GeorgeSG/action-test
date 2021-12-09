@@ -4,6 +4,9 @@ branding:
   icon: 'check-square'
   color: 'blue'
 inputs:
+  apiUrl:
+    description: "Atlassian API URL"
+    required: true
   apiEmail:
     description: "Atlassian API Email"
     required: true

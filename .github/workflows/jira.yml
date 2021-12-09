@@ -1,0 +1,19 @@
+on: [push]
+
+jobs:
+  jira-job:
+    runs-on: ubuntu-latest
+    name: create jira issue
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: check_jira
+        uses: ./.github/actions # Uses an action in the root directory
+        id: jira
+        with:
+          issueType: task
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.check_jira.outputs.time }}"

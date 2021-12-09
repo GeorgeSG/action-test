@@ -15,5 +15,5 @@ jobs:
         with:
           apiEmail: gogogardev@gmail.com
           apiToken: o2dDPNo5euCPV84Owl0i332E
-          issueType: task
+          issueType: Task
           commitMessage: ${{ github.event.head_commit.message }}

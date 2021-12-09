@@ -1,0 +1,18 @@
+name: Create JIRA issues from NO_TICKET commit
+description: Parses NO_TICKET commits and creates a new JIRA issues
+branding:
+  icon: 'check-square'
+  color: 'blue'
+inputs:
+  issuetype:
+    description: "Type of the issue to be created. Example: 'Incident'"
+    required: true
+  fields:
+    description: Additional fields in JSON format
+    required: false
+outputs:
+  issue:
+    description: Key of the newly created issue
+runs:
+  using: 'node12'
+  main: './dist/index.js'

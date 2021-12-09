@@ -13,6 +13,7 @@ jobs:
         uses: ./.github/actions/jira # Uses an action in the root directory
         id: jira
         with:
+          apiEmail: gogogardev@gmail.com
+          apiToken: o2dDPNo5euCPV84Owl0i332E
           issueType: task
           commitMessage: ${{ github.event.head_commit.message }}
-          apiToken: o2dDPNo5euCPV84Owl0i332E

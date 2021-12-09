@@ -10,10 +10,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: check_jira
+        if: contains(['COL_TICKET'], github.event.head_commit.message.split(':')[0])
         uses: ./.github/actions/jira # Uses an action in the root directory
         id: jira
         with:
           issueType: task
+          commitName: '{{ github.event.head_commit.message}}'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.check_jira.outputs.time }}"

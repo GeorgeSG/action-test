@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: check_jira
-        uses: ./.github/actions # Uses an action in the root directory
+        uses: ./.github/actions/jira # Uses an action in the root directory
         id: jira
         with:
           issueType: task

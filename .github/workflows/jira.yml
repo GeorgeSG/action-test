@@ -15,6 +15,9 @@ jobs:
         with:
           issueType: task
           commitMessage: ${{ github.event.head_commit.message }}
+      - name: Logging
+        run: |
+          echo "${{toJSON(github.event)}}"
       # Use the output from the `hello` step
       # - name: Get the output time
       #   run: echo "The time was ${{ steps.check_jira.outputs.time }}"

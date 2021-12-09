@@ -7,8 +7,8 @@ inputs:
   issuetype:
     description: "Type of the issue to be created. Example: 'Incident'"
     required: true
-  commitName:
-    description: Name of the commit
+  commitMessage:
+    description: Message of the commit
     required: true
   fields:
     description: Additional fields in JSON format

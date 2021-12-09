@@ -18,3 +18,4 @@ jobs:
           apiToken: ${{ secrets.ATLASSIAN_TOKEN }}
           issueType: Task
           commitMessage: ${{ github.event.head_commit.message }}
+          commitSha: ${{ github.event.head_commit.sha }}

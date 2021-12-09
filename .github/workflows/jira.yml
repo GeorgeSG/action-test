@@ -14,7 +14,7 @@ jobs:
         id: jira
         with:
           apiUrl: https://georgi-test.atlassian.net/
-          apiEmail: gogogardev@gmail.com
-          apiToken: o2dDPNo5euCPV84Owl0i332E
+          apiEmail: ${{ secrets.ATLASSIAN_EMAI }}
+          apiToken: ${{ secrets.ATLASSIAN_TOKEN }}
           issueType: Task
           commitMessage: ${{ github.event.head_commit.message }}

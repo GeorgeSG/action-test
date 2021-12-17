@@ -9,6 +9,9 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Dump GitHub context
+        run: |
+          echo "${{ toJson(github) }}"
       - name: check_jira
         uses: ./.github/actions/jira # Uses an action in the root directory
         id: jira

@@ -1,6 +1,6 @@
 on:
   pull_request:
-    types: [opened, edited]
+    types: [closed]
 
 jobs:
   jira-job:

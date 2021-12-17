@@ -16,18 +16,9 @@ inputs:
   githubToken:
     description: "Github Token"
     required: true
-  projectKeys:
-    description: "Array of JIRA Project Keys that this Action is enabled for. Example: '[\"KEY\"]'"
-    required: true
   issueType:
     description: "Type of the issue to be created. Example: 'Incident'"
     required: true
-  # commitSha:
-  #   description: SHA of the commit
-  #   required: true
-  # commitMessage:
-  #   description: Message of the commit
-  #   required: true
 runs:
   using: 'node12'
   main: './dist/index.js'

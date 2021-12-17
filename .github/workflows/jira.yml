@@ -1,6 +1,7 @@
 on:
   pull_request:
     types: [closed]
+    branches: [main]
 
 jobs:
   jira-job:
@@ -23,6 +24,3 @@ jobs:
           apiToken: ${{ secrets.ATLASSIAN_TOKEN }}
           githubToken: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
           issueType: Task
-          # commitMessage: ${{ github.event.head_commit.message }}
-          # commitSha: ${{ github.event.head_commit.id }}
-          projectKeys: '["COL"]'

@@ -13,6 +13,9 @@ inputs:
   apiToken:
     description: "Atlassian API Token"
     required: true
+  githubToken:
+    description: "Github Token"
+    required: true
   projectKeys:
     description: "Array of JIRA Project Keys that this Action is enabled for. Example: '[\"KEY\"]'"
     required: true

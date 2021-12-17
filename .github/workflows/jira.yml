@@ -21,6 +21,7 @@ jobs:
           apiUrl: https://georgi-test.atlassian.net/
           apiEmail: ${{ secrets.ATLASSIAN_EMAIL }}
           apiToken: ${{ secrets.ATLASSIAN_TOKEN }}
+          githubToken: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
           issueType: Task
           # commitMessage: ${{ github.event.head_commit.message }}
           # commitSha: ${{ github.event.head_commit.id }}
